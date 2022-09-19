@@ -29,6 +29,7 @@ export class AppComponent {
         let srcSheet = (await srcWB).worksheets[k];
         let destSheet = (await destWB).worksheets[k];
 
+        // we have to use actualRowCount and actualColumnCount only for condition purpose but while reading data use only rowcount and columncolunt
         if (srcSheet.actualRowCount == destSheet.actualRowCount && srcSheet.actualColumnCount == destSheet.actualColumnCount) {
           for (let i = 1; i <= srcSheet.rowCount; i++) {
             for (let j = 1; j <= destSheet.rowCount; j++) {
